@@ -1,6 +1,7 @@
 <?php
+    session_start();
     $title = "Caverne des jeux";
-    include "header.php";
+    require_once "../Element/header.php";
 ?>
 
 <div class="row g-6">
@@ -75,7 +76,6 @@
         </div>
     </div>  
 
-
 <?php
-    include "footer.php";
+    require_once "../Element/footer.php";
 ?>

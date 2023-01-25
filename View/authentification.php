@@ -1,6 +1,7 @@
 <?php
+    session_start();
     $title = "Authentification";
-    include "header.php";
+    require_once "../Element/header.php";
 ?>
 
 <h1>Authentifiez vous</h1>
@@ -47,5 +48,5 @@
 </div>
 
 <?php
-    include "footer.php";
+    require_once "../Element/footer.php";
 ?>

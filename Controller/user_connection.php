@@ -1,4 +1,6 @@
 <?php
+
+    session_start();
     require_once "db_connection.php";
 
     //redirect to authentification.php if required data are missing.
@@ -29,12 +31,12 @@
         header("Location: ../View/authentification.php");
         exit();
     }else{
-        $query = "SELECT id FROM user WHERE email = ? AND password = ? ";
+        $query = "SELECT id, account_level_id FROM user WHERE email = ? AND password = ? ";
         $stmt = $dbh_readonly->prepare($query);
         $stmt->execute([$user_login_email,$user_login_password]);
-        $user_id = $stmt->fetch(PDO::FETCH_ASSOC);
-        $_SESSION["user_id"] = $user_id['id'];
+        $user= $stmt->fetch(PDO::FETCH_ASSOC);
+        $_SESSION["user_id"] = $user['id'];
+        $_SESSION["account_level_id"] = $user['account_level_id'];
         header("Location: ../View/profil.php");
         exit();
     }
-

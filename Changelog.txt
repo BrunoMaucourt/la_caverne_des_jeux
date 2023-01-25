@@ -1,0 +1,8 @@
+Améliorer la sécurité
+
+- Calculer la force du mot de passe
+- Renvoyer un message d'erreur lorsqu'un mot de passe trop simple est choisi : password, 0000, motdepasse, ...
+
+Photo profil
+
+- Gérer les tailles d'images pour l'upload

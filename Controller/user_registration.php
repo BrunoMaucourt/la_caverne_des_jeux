@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require_once "db_connection.php";
 
     //redirect to authentification.php if required data are missing.
@@ -61,7 +62,9 @@
         $query = "UPDATE user SET profil_picture = ? WHERE id = ?";
         $stmt = $dbh_readwrite->prepare($query);
         $stmt->execute([$new_user_profil_picture_new_location,$user_id['id']]);
-
     }
+
+    $_SESSION['user_id'] = $user_id['id'];
+    $_SESSION['account_level_id'] = 3;
     header("Location: ../View/profil.php");
     exit();

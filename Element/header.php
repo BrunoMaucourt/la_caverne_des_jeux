@@ -14,8 +14,12 @@
         <div id="banner" >
             <h2>Caverne des jeux</h2>
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-danger">Connexion</button>
-                <button type="button" class="btn btn-warning">Panier</button>
+                <a href="./authentification.php">
+                    <button type="button" class="btn btn-danger">Connexion</button>
+                </a>
+                <a href="./cart.php">
+                    <button type="button" class="btn btn-warning">Panier</button>
+                </a>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">

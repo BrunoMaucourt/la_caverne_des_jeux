@@ -1,8 +1,8 @@
 <?php
     $title = "Mes paramètres";
-    include "header.php";
+    require_once "../Element/header.php";
 ?>
 
 <?php
-    include "footer.php";
+    require_once "../Element/footer.php";
 ?>

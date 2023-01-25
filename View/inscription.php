@@ -1,11 +1,13 @@
 <?php
+    session_start();
     $title = "Inscription";
+    // Redirect to authentification page if no email
     if(!isset($_GET['new_user_email'])){
         header("Location: ./authentification.php");
         exit();
     }
     $new_user_email = $_GET['new_user_email'];
-    require_once "header.php";
+    require_once "../Element/header.php";
 ?>
 
 <div class="col-6 p-3 m-auto">
@@ -46,5 +48,5 @@
 
 
 <?php
-    include "footer.php";
+    require_once "../Element/footer.php";
 ?>

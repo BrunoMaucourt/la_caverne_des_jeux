@@ -1,0 +1,5 @@
+#Ignore OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+# ignore db_connection.php
