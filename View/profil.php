@@ -1,9 +1,8 @@
 <?php
     session_start();
     $title = "Mon profil";
-    define("ADMIN_LEVEL", 1);
-    define("SELLER_LEVEL", 2);
     require_once "../Controller/check_user_connected.php";
+    require_once "../Controller/constant.php";
     require_once "../Element/header.php";
 ?>
 <h1>Mon profil</h1>
@@ -15,7 +14,7 @@
                 echo <<<HTML
                 <div class="col p-3">
                     <div class="card text-bg-light">
-                        <a href="" class="text-decoration-none">
+                        <a href="./add_game_categorie.php" class="text-decoration-none">
                         <div class="card-header">Ajouter une catégorie de jeux</div>
                         <div class="card-body">
                         <p class="card-text">Ajouter une nouvelle catégorie de jeux</p>
@@ -25,7 +24,7 @@
                 </div>
                 <div class="col p-3">
                     <div class="card text-bg-light">
-                        <a href="" class="text-decoration-none">
+                        <a href="./add_age_range.php" class="text-decoration-none">
                         <div class="card-header">Ajouter une tranche d'âge</div>
                         <div class="card-body">
                         <p class="card-text">Ajouter une nouvelle tranche d'âge</p>
@@ -35,7 +34,7 @@
                 </div>
                 <div class="col p-3">
                     <div class="card text-bg-light">
-                        <a href="" class="text-decoration-none">
+                        <a href="./add_game.php" class="text-decoration-none">
                         <div class="card-header">Ajouter un éditeur</div>
                         <div class="card-body">
                         <p class="card-text">Ajouter un nouvel utilisateur</p>
@@ -45,7 +44,7 @@
                 </div>
                 <div class="col p-3">
                     <div class="card text-bg-light">
-                        <a href="" class="text-decoration-none">
+                        <a href="./add_player_number.php" class="text-decoration-none">
                         <div class="card-header">Ajouter un nombre de joueurs</div>
                         <div class="card-body">
                         <p class="card-text">Ajouter un nouveau nombre de joueurs</p>
@@ -55,20 +54,10 @@
                 </div>
                 <div class="col p-3">
                     <div class="card text-bg-light">
-                        <a href="" class="text-decoration-none">
+                        <a href="./modify_user.php" class="text-decoration-none">
                         <div class="card-header">Modifier utilisateur</div>
                         <div class="card-body">
                         <p class="card-text">Modifier les informations d'un utilisateur</p>
-                        </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col p-3">
-                    <div class="card text-bg-light">
-                        <a href="" class="text-decoration-none">
-                        <div class="card-header">Modifier le status d'un utilisateur</div>
-                        <div class="card-body">
-                        <p class="card-text">Accorder un nouveau status à un utilisateur</p>
                         </div>
                         </a>
                     </div>
@@ -89,7 +78,7 @@ HTML;
                 </div>
                 <div class="col p-3">
                     <div class="card text-bg-light">
-                        <a href="./add_game.php" class="text-decoration-none">
+                        <a href="./modify_game.php" class="text-decoration-none">
                         <div class="card-header">Modifier un jeu</div>
                         <div class="card-body">
                         <p class="card-text">Modifier les informations d'un jeu ou le supprimer de la liste</p>
