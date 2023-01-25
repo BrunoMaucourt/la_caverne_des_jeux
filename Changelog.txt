@@ -6,3 +6,7 @@ Améliorer la sécurité
 Photo profil
 
 - Gérer les tailles d'images pour l'upload
+
+Header / navbar
+
+- actualiser s'il y a un grand nombre de catégories / éditeur / ...
