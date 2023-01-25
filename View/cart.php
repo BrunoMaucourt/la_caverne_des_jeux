@@ -1,5 +1,5 @@
 <?php
-    $title = "Mes paramètres";
+    $title = "Mon panier";
     include "header.php";
 ?>
 

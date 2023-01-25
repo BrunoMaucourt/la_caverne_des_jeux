@@ -1,5 +1,5 @@
 <?php
-    $title = "Mes paramètres";
+    $title = "Ajouter un jeu";
     include "header.php";
 ?>
 

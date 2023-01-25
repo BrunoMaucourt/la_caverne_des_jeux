@@ -1,5 +1,5 @@
 <?php
-    $title = "Mes paramètres";
+    $title = "Ajouter un éditeur";
     include "header.php";
 ?>
 

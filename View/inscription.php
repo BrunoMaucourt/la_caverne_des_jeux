@@ -1,5 +1,5 @@
 <?php
-    $title = "Mes paramètres";
+    $title = "Inscription";
     include "header.php";
 ?>
 
