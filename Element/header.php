@@ -8,9 +8,24 @@
         $stmt = $dbh_readonly->prepare($query);
         $stmt->execute([$_SESSION['user_id']]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
     }
-    
-       
+
+    $query = "SELECT name FROM category WHERE 1";
+    $stmt = $dbh_readonly->query($query);
+    $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $query = "SELECT name FROM editor WHERE 1";
+    $stmt = $dbh_readonly->query($query);
+    $editors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $query = "SELECT age_range FROM age_range WHERE 1";
+    $stmt = $dbh_readonly->query($query);
+    $age_ranges = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $query = "SELECT player_number FROM player_number WHERE 1";
+    $stmt = $dbh_readonly->query($query);
+    $player_numbers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     
 
@@ -33,7 +48,7 @@
             <?php if($user_is_connected){
                 echo "<h3>Bonjour ".$user['first_name']." !</h3>";
                 echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <a href="../Controller/authentification.php">
+                <a href="../View/profil.php">
                     <button type="button" class="btn btn-danger">Mon Profil</button>
                 </a>
                 <a href="./cart.php">
@@ -42,7 +57,7 @@
             </div>';
             }else{
                 echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <a href="./authentification.php">
+                <a href="../View/authentification.php">
                     <button type="button" class="btn btn-danger">Connexion</button>
                 </a>
                 <a href="./cart.php">
@@ -61,7 +76,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="../View/index.php">Accueil</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -69,13 +84,15 @@
                         Catégorie
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Solo</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Famille</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Coopératif</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Expert</a></li>
+                        <?php 
+                            foreach ($categories as $key=>$category) {
+                                if(count($categories)-1 == $key){
+                                    echo '<li><a class="dropdown-item" href="#">'.$category['name']. '</a></li>';
+                                }else{
+                                    echo '<li><a class="dropdown-item" href="#">'.$category['name']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                }                                  
+                            }
+                        ?>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -83,13 +100,15 @@
                         Editeur
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Solo</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Famille</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Coopératif</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Expert</a></li>
+                        <?php 
+                            foreach ($editors as $key=>$editor) {
+                                if(count($editors)-1 == $key){
+                                    echo '<li><a class="dropdown-item" href="#">'.$editor['name']. '</a></li>';
+                                }else{
+                                    echo '<li><a class="dropdown-item" href="#">'.$editor['name']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                }                                  
+                            }
+                        ?>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -97,27 +116,31 @@
                         Age
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Solo</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Famille</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Coopératif</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Expert</a></li>
+                        <?php 
+                            foreach ($age_ranges as $key=>$age_range) {
+                                if(count($age_ranges)-1 == $key){
+                                    echo '<li><a class="dropdown-item" href="#">'.$age_range['age_range']. '</a></li>';
+                                }else{
+                                    echo '<li><a class="dropdown-item" href="#">'.$age_range['age_range']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                }                                  
+                            }
+                        ?>
                     </ul>
                     </li>
                     <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Durée
+                        Nombre de Joueur
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Solo</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Famille</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Coopératif</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Expert</a></li>
+                        <?php 
+                            foreach ($player_numbers as $key=>$player_number) {
+                                if(count($player_numbers)-1 == $key){
+                                    echo '<li><a class="dropdown-item" href="#">'.$player_number['player_number']. '</a></li>';
+                                }else{
+                                    echo '<li><a class="dropdown-item" href="#">'.$player_number['player_number']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                }                                  
+                            }
+                        ?>
                     </ul>
                     </li>
                 </ul>
