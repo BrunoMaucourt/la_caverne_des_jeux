@@ -1,3 +1,20 @@
+<?php
+    require_once "../Controller/db_connection.php";
+    if(!isset($_SESSION['user_id'])){
+        $user_is_connected = false;
+    }else{
+        $user_is_connected = true;
+        $query = "SELECT first_name FROM user WHERE id = ?";
+        $stmt = $dbh_readonly->prepare($query);
+        $stmt->execute([$_SESSION['user_id']]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    
+       
+
+    
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,14 +30,27 @@
     <header>
         <div id="banner" >
             <h2>Caverne des jeux</h2>
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <?php if($user_is_connected){
+                echo "<h3>Bonjour ".$user['first_name']." !</h3>";
+                echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <a href="../Controller/authentification.php">
+                    <button type="button" class="btn btn-danger">Mon Profil</button>
+                </a>
+                <a href="./cart.php">
+                    <button type="button" class="btn btn-warning">Panier</button>
+                </a>
+            </div>';
+            }else{
+                echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <a href="./authentification.php">
                     <button type="button" class="btn btn-danger">Connexion</button>
                 </a>
                 <a href="./cart.php">
                     <button type="button" class="btn btn-warning">Panier</button>
                 </a>
-            </div>
+            </div>';
+            }?>
+            
         </div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -92,7 +122,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">rechercher</button>
                 </form>
                 </div>
