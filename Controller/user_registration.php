@@ -33,7 +33,7 @@
     $stmt->execute([$new_user_last_name,$new_user_first_name,$new_user_email,$new_user_password,$new_user_birthdate]);
 
     // Change default avatar if file send by user is correct
-    if(isset($_FILES['new_user_profil_picture']) && $_FILES['new_user_profil_picture']["error"] = UPLOAD_ERR_OK){
+    if(isset($_FILES['new_user_profil_picture']) && $_FILES['new_user_profil_picture']["error"] == UPLOAD_ERR_OK){
 
         // query to get ID from new user to 
         $query = "SELECT id FROM user WHERE email = ?";
