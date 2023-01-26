@@ -66,13 +66,14 @@
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Catégorie
                     </a>
+                    <a href=""></a>
                     <ul class="dropdown-menu">
                         <?php 
                             foreach ($categories as $key=>$category) {
                                 if(count($categories)-1 == $key){
-                                    echo '<li><a class="dropdown-item" href="#">'.$category['name']. '</a></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=category&id='.$category['id'].'">'.$category['name']. '</a></li>';
                                 }else{
-                                    echo '<li><a class="dropdown-item" href="#">'.$category['name']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=category&id='.$category['id'].'">'.$category['name']. '</a></li><li><hr class="dropdown-divider"></li>';
                                 }                                  
                             }
                         ?>
@@ -86,9 +87,9 @@
                         <?php 
                             foreach ($editors as $key=>$editor) {
                                 if(count($editors)-1 == $key){
-                                    echo '<li><a class="dropdown-item" href="#">'.$editor['name']. '</a></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=editor&id='.$editor['id'].'">'.$editor['name']. '</a></li>';
                                 }else{
-                                    echo '<li><a class="dropdown-item" href="#">'.$editor['name']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=editor&id='.$editor['id'].'">'.$editor['name']. '</a></li><li><hr class="dropdown-divider"></li>';
                                 }                                  
                             }
                         ?>
@@ -102,9 +103,9 @@
                         <?php 
                             foreach ($age_ranges as $key=>$age_range) {
                                 if(count($age_ranges)-1 == $key){
-                                    echo '<li><a class="dropdown-item" href="#">'.$age_range['age_range']. '</a></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=age_range&id='.$age_range['id'].'">'.$age_range['age_range']. '</a></li>';
                                 }else{
-                                    echo '<li><a class="dropdown-item" href="#">'.$age_range['age_range']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=age_range&id='.$age_range['id'].'">'.$age_range['age_range']. '</a></li><li><hr class="dropdown-divider"></li>';
                                 }                                  
                             }
                         ?>
@@ -118,9 +119,9 @@
                         <?php 
                             foreach ($player_numbers as $key=>$player_number) {
                                 if(count($player_numbers)-1 == $key){
-                                    echo '<li><a class="dropdown-item" href="#">'.$player_number['player_number']. '</a></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=player_number&id='.$player_number['id'].'">'.$player_number['player_number']. '</a></li>';
                                 }else{
-                                    echo '<li><a class="dropdown-item" href="#">'.$player_number['player_number']. '</a></li><li><hr class="dropdown-divider"></li>';
+                                    echo '<li><a class="dropdown-item" href="./games.php?page=player_number&id='.$player_number['id'].'">'.$player_number['player_number']. '</a></li><li><hr class="dropdown-divider"></li>';
                                 }                                  
                             }
                         ?>
