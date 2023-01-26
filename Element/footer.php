@@ -1,27 +1,27 @@
 </main>
-<footer class="mt-5 p-4 bg-dark text-white text-center">
+<footer class="container mt-5 p-4 bg-dark text-white text-center">
     <div class="footer_column">
         <div>
             <figure>
-                <img src="../Picture/Website/icone.svg" alt="">
+                <img src="../Picture/Website/icon_dice.svg" alt="">
             </figure>
             <p>Milliers de références</p>
         </div>
         <div>
             <figure>
-                <img src="../Picture/Website/icone.svg" alt="">
+                <img src="../Picture/Website/icon_phone.svg" alt="">
             </figure>
             <p>équipe à votre écoute</p>
         </div>
         <div>
             <figure>
-                <img src="../Picture/Website/icone.svg" alt="">
+                <img src="../Picture/Website/icon_locker.svg" alt="">
             </figure>
             <p>paiments sécurisé</p>
         </div>
         <div>
             <figure>
-                <img src="../Picture/Website/icone.svg" alt="">
+                <img src="../Picture/Website/icon_24h.svg" alt="">
             </figure>
             <p>commande sous 24h</p>
         </div> 

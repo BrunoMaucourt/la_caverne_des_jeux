@@ -1,8 +1,0 @@
-<?php
-    $title = "Ajouter un éditeur";
-    include "header.php";
-?>
-
-<?php
-    include "footer.php";
-?>
