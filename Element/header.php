@@ -11,18 +11,22 @@
 
     }
 
+    //query to get all  categories
     $query = "SELECT name FROM category WHERE 1";
     $stmt = $dbh_readonly->query($query);
     $categories = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    //query to get all editors
     $query = "SELECT name FROM editor WHERE 1";
     $stmt = $dbh_readonly->query($query);
     $editors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    //query to get all age range
     $query = "SELECT age_range FROM age_range WHERE 1";
     $stmt = $dbh_readonly->query($query);
     $age_ranges = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    //query to get all player number
     $query = "SELECT player_number FROM player_number WHERE 1";
     $stmt = $dbh_readonly->query($query);
     $player_numbers = $stmt->fetchAll(PDO::FETCH_ASSOC);

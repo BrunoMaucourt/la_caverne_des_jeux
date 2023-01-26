@@ -2,6 +2,13 @@
     session_start();
     $title = "Caverne des jeux";
     require_once "../Element/header.php";
+
+    $query = "SELECT * FROM game WHERE 1 ORDER BY publication_date DESC";
+    $stmt = $dbh_readonly->query($query);
+    $recent_games = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $query = "SELECT * FROM game WHERE 1 ORDER BY sold DESC";
+    $stmt = $dbh_readonly->query($query);
+    $best_seller_games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="row g-6">
@@ -44,34 +51,32 @@
         </button>
     </div>
 </div>
-    
-    <div class="row text-center">
-        <div class="col-6">
-            <h2>Meilleurs ventes</h2>
+
+    <div class="row text-center row-cols-1 row-cols-lg-2">
+        <div class="col">
+            <h2>Meilleures ventes</h2>
             <div class="row text-center">
-                <div class="col-4">
-                    <p>Jeu1</p>
-                </div>
-                <div class="col-4">
-                    <p>Jeu2</p>
-                </div>
-                <div class="col-4">
-                    <p>Jeu3</p>
-                </div>
+                <?php
+                    for ($i=0; $i < 3; $i++) {
+                        echo '<div class="col-4">
+                                <p>'.$best_seller_games[$i]["name"].'</p>
+                                <img src="../Picture/Avatar/default_avatar.jpg" class="w-100 m-2">
+                                <p>'.$best_seller_games[$i]["description"].'</p>
+                              </div>';
+                    }
+                ?>
             </div>
         </div>
-        <div class="col-6">
-            <h2>Nouvautés</h2>
+        <div class="col">
+            <h2>Nouveautés</h2>
             <div class="row text-center">
-                <div class="col-4">
-                    <p>Jeu1</p>
-                </div>
-                <div class="col-4">
-                    <p>Jeu2</p>
-                </div>
-                <div class="col-4">
-                    <p>Jeu3</p>
-                </div>
+                <?php
+                    for ($i=0; $i < 3; $i++) {
+                        echo '<div class="col-4">
+                                <p>'.$recent_games[$i]['name'].'</p>
+                            </div>';
+                    }
+                ?>
             </div>
         </div>
     </div>  
