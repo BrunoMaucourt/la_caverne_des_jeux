@@ -102,9 +102,9 @@ HTML;
         <div class="col p-3">
             <div class="card text-bg-danger">
                 <a href="../Controller/user_disconnect.php" class="text-decoration-none">
-                <div class="card-header">Se déconnecter</div>
+                <div class="card-header text-white">Se déconnecter</div>
                     <div class="card-body">
-                        <p class="card-text">Vous allez nous manquer</p>
+                        <p class="card-text text-white">Vous allez nous manquer</p>
                     </div>
                 </a>
             </div>
