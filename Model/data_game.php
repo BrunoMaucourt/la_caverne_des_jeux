@@ -1,4 +1,7 @@
 <?php
+    $query = "SELECT * FROM game WHERE 1";
+    $stmt = $dbh_readonly->query($query);
+    $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $query = "SELECT * FROM category WHERE 1";
     $stmt = $dbh_readonly->query($query);
