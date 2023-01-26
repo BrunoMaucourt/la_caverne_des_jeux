@@ -13,12 +13,11 @@
     $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
 ?>
-
 <?php
     foreach ($games as $game) {
-        echo '<div class="row row-cols-12 text-center border m-3">
-        <div class="col-2 border">
-            <img src="../Picture/Avatar/default_avatar.jpg" class="card-img-top ">
+        echo '<div class="row row-cols-12 text-center border m-3" style="height:200px">
+        <div class="col-2 border d-flex justify-content-center align-items-center">
+            <img src=" '.$game['game_picture'].' " class="card-img-top">
         </div>
         <div class="col-6 m-auto">
             <div class="row">
@@ -54,7 +53,7 @@
             if(!isset($_SESSION['account_level_id']) || $_SESSION['account_level_id'] == CLIENT_LEVEL){
                 echo '<button type="submit" class="btn btn-primary" formAction ="../Controller/add_to_cart.php">Ajouter au panier</button>';
             }else{
-                echo '<button type="submit" class="btn btn-primary" formAction ="profil.php">Modifier article</button>';
+                echo '<button type="submit" class="btn btn-primary" formAction ="./edit_game.php?game_id='.$game['id'].' ">Modifier article</button>';
             }
             echo '
         </form>
@@ -62,8 +61,6 @@
 </div>';
     }
 ?>
-
-
 <?php
     require_once "../Element/footer.php";
 ?>
