@@ -1,6 +1,11 @@
 <?php
     session_start();
     $title = "Mon panier";
+    if(!isset($_SESSION['user_id'])){
+        
+    }else{
+        require_once "../Controller/check_is_client.php";
+    }
     require_once "../Element/header.php";
 ?>
 <h1>Mon panier</h1>

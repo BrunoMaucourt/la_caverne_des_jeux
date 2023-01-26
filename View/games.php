@@ -9,7 +9,6 @@
     $db_table_id = $_GET['id'];
 
     $query = "SELECT G.* FROM game G INNER JOIN $db_table A ON G.$db_table_plus = A.id WHERE A.id = $db_table_id";
-    $editor_query = "SELECT * FROM editor WHERE 1";
     $stmt = $dbh_readonly->query($query);
     $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
@@ -47,13 +46,18 @@
         <div class="col-2 m-auto">
             <div class="row">
                 <h4>'.number_format($game['price'],2). '€</h4>
-            </div>';
+            </div>
+            <form method="post">
+            <input type="hidden" name="product_id" value="'.$game['id'].'">
+            <input type="hidden" name="db_table" value="'.$db_table.'">
+            <input type="hidden" name="db_table_id" value="'.$db_table_id.'">';
             if(!isset($_SESSION['account_level_id']) || $_SESSION['account_level_id'] == CLIENT_LEVEL){
-                echo '<a href="#" class="btn btn-primary">Ajouter au panier</a>';
+                echo '<button type="submit" class="btn btn-primary" formAction ="../Controller/add_to_cart.php">Ajouter au panier</button>';
             }else{
-                echo '<a href="#" class="btn btn-primary">Modifier article</a>';
+                echo '<button type="submit" class="btn btn-primary" formAction ="profil.php">Modifier article</button>';
             }
             echo '
+        </form>
         </div> 
 </div>';
     }
