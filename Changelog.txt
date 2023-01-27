@@ -7,6 +7,8 @@ table possède une clé primaire. Certaines tables contiennent une clé étrang�
 
 - Objectif 2 Un utilisateur peut ajouter, modifier ou supprimer des produits gérés par le site web.
 
+- Objectif 3 L’utilisateur peut rechercher des produits selon leur nom et/ou leur description.
+
 - Objectif 4 L’utilisateur peut rechercher des produits selon leur catégorie.
 
 - Objectif 5 L'utilisateur doit pouvoir choisir le thème d'affichage des pages web du site. Par
@@ -62,7 +64,7 @@ projet de cette semaine de formation.
 
 User-stories en cours
 
-- Objectif 3 L’utilisateur peut rechercher des produits selon leur nom et/ou leur description.
+- Aucune
 
 User-stories à faire
 
