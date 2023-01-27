@@ -30,10 +30,10 @@
 >
     <header class="container">
         <div class="row">
-            <div class="col-3 text-center">
+            <div class="col-lg-3 col-sm-12 text-center">
                 <h2>Caverne des jeux</h2>
             </div>
-            <div class="col-5">
+            <div class="col-lg-5 col-sm-12">
                 
                 <?php 
                     if($user_is_connected){
@@ -50,7 +50,7 @@
                     }
                 ?>
             </div>
-            <div class="col-4 d-flex justify-content-between m-auto">
+            <div class="col-lg-4 col-sm-12 d-flex justify-content-between m-auto">
                     <?php
                         if($user_is_connected){
                             echo '<a href="../View/profil.php">
