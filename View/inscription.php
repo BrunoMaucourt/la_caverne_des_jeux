@@ -1,10 +1,20 @@
 <?php
     session_start();
+    require_once "../Controller/db_connection.php";
     $title = "Inscription";
     // Redirect to authentification page if no email
     if(!isset($_GET['new_user_email'])){
         header("Location: ./authentification.php");
         exit();
+    }else{
+        $new_user_email = $_GET['new_user_email'];
+        $query = "SELECT COUNT(*) nb_user FROM user WHERE email = '$new_user_email'";
+        $stmt = $dbh_readonly->query($query);
+        $nb_users = $stmt->fetch(PDO::FETCH_ASSOC); 
+        if($nb_users['nb_user'] == 1){
+            header("Location: ./authentification.php");
+            $_SESSION['user_already_exist_alert'] = "Cet email est déjà utilisé";
+        }
     }
     $new_user_email = $_GET['new_user_email'];
     require_once "../Element/header.php";

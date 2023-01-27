@@ -44,6 +44,14 @@
                 </div>
             </form>
         </div>
+        <?php
+            if(isset($_SESSION['user_already_exist_alert'])){
+                echo'<div class = "row text-center">
+                        <h5>'.$_SESSION['user_already_exist_alert'].'</h5>
+                     </div>';
+                unset($_SESSION['user_already_exist_alert']);
+            }
+        ?>
     </div>
 </div>
 
