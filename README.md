@@ -4,7 +4,7 @@ La caverne des jeux est un projet réalisé dans le cadre du cours de PHP à la 
 
 Le projet réalisé correspond à un site marchand de jeux de société.
 
-https://github.com/BrunoMaucourt/la_caverne_des_jeux
+![mockup La carverne des jeux](https://raw.githubusercontent.com/BrunoMaucourt/la_caverne_des_jeux/main/Picture/Website/mockups_caverne_des_jeux.jpg)
 
 ## Features du site :
 
@@ -35,3 +35,5 @@ https://github.com/TitiBond
 https://brunomaucourt.com/
 
 https://github.com/BrunoMaucourt
+
+![mockup La carverne des jeux](https://raw.githubusercontent.com/BrunoMaucourt/la_caverne_des_jeux/main/Picture/Website/mockups_caverne_des_jeux_1.jpg)
