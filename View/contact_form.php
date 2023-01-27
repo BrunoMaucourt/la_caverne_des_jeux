@@ -6,7 +6,7 @@
 <h1>Nous contacter</h1>
 <div class="col-lg-8 col-xl-10 p-3 m-auto">
     <div class="border bg-secondary">
-        <form action="../Controller/contact_form_back.php" method="post">
+        <form action="./contact_form_sumary.php" method="post">
 
             <label for="contact_last_name">Votre nom *</label>
             <input type="text" class="form-control" name="contact_last_name" id="contact_last_name" required="required" placeholder="Votre nom">
@@ -24,7 +24,7 @@
 
             <div class="form-group row mt-3">
                 <label for="" class="col-sm-2 col-form-label">La raison de votre message</label>
-                <select class="custom-select w-75" name="" id="" required='required'>
+                <select class="custom-select w-75" name="contact_motif" id="contact_motif" required='required'>
                     <option value="">Nous poser une question</option>
                     <option selected>Candidater pour un emploi</option>
                     <option value="">Candidature pour un stage non rémunéré</option>
@@ -37,7 +37,7 @@
             <div class="form-group row mt-3">
                 <label for="contact_message" class="col-sm-2 col-form-label">Votre message</label>
                 <div class="col-sm-10">
-                    <textarea type="" class="form-control" name="contact_message" id="contact_message" required='required'>Votre message</textarea>
+                    <textarea class="form-control" name="contact_message" id="contact_message" required='required'>Votre message</textarea>
                 </div>
             </div>
 
@@ -46,25 +46,25 @@
                     <legend class="col-form-label col-sm-2 pt-0" for="new_game_categorie">Vous voulez votre réponse par</legend>
                     <div class="col-sm-10">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="contact_type" id="Email" value="Email">
+                            <input class="form-check-input" type="checkbox" name="contact_type_email" id="Email" value="Email">
                             <label class="form-check-label" for="Email">
                                 Email
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="contact_type" id="Téléhonne" value="Téléhonne">
-                            <label class="form-check-label" for="Téléhonne">
-                                Téléhonne
+                            <input class="form-check-input" type="checkbox" name="contact_type_téléphone" id="Téléphone" value="Téléphone">
+                            <label class="form-check-label" for="Téléphone">
+                                Téléphone
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="contact_type" id="Signaux de fumées" value="Signaux de fumées">
+                            <input class="form-check-input" type="checkbox" name="contact_type_fumées" id="Signaux de fumées" value="Signaux de fumées">
                             <label class="form-check-label" for="Signaux de fumées">
                                 Signaux de fumées
                             </label>
                         </div>                  
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="contact_type" id="Piegons voyageurs" value="Piegons voyageurs">
+                            <input class="form-check-input" type="checkbox" name="contact_type_piegons" id="Piegons voyageurs" value="Piegons voyageurs">
                             <label class="form-check-label" for="Piegons voyageurs">
                                 Piegons voyageurs
                             </label>
