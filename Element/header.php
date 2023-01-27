@@ -25,33 +25,48 @@
     <link rel="stylesheet" href="../Style/style.css">
     <title><?php echo $title ?></title>
 </head>
-<body class="container">
+<body class="container"
+<?PHP require_once "../Controller/theme_connected_user.php"?>
+>
     <header>
-        <div id="banner" >
-            <h2>Caverne des jeux</h2>
-            <?php if($user_is_connected){
-                echo "<h3>Bonjour ".$user['first_name']." !</h3>";
-                echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <a href="../View/profil.php">
-                    <button type="button" class="btn btn-danger">Mon Profil</button>
-                </a>';
-                if($_SESSION['account_level_id'] == CLIENT_LEVEL){
-                    echo'<a href="./cart.php">
-                    <button type="button" class="btn btn-warning">Panier</button>
-                </a>';
-                }
-                echo'</div>';
-            }else{
-                echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <a href="../View/authentification.php">
-                    <button type="button" class="btn btn-danger">Connexion</button>
-                </a>
-                <a href="./cart.php">
-                    <button type="button" class="btn btn-warning">Panier</button>
-                </a>
-            </div>';
-            }?>
-            
+        <div class="row p-1">
+            <div class="col-lg-6">
+                <h2>Caverne des jeux</h2>
+            </div>
+            <div class="col-lg-6 d-flex flex-row justify-content-around">
+                <?php if($user_is_connected){
+                    echo "<h3>Bonjour ".$user['first_name']." !</h3>";
+                    echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <figure>
+                        <img class="w-25" src=" '. $user_data['profil_picture'] . ' " alt="Photo de profil">
+                    </figure>
+                    <a href="../View/profil.php">
+                        <button type="button" class="btn btn-danger">Mon Profil</button>
+                    </a>';
+                    if($_SESSION['account_level_id'] == CLIENT_LEVEL){
+                        echo'<a href="./cart.php">
+                        <button type="button" class="btn btn-success">Panier</button>
+                    </a>';
+                    }
+                    echo '
+                    <form action="../Controller/theme_switch.php" method="post">
+                        <input type="submit" class="btn btn-warning" value="Thème">
+                    </form>
+                    </div>';
+                }else{
+                    echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                    <a href="../View/authentification.php">
+                        <button type="button" class="btn btn-danger">Connexion</button>
+                    </a>
+                    <a href="./cart.php">
+                        <button type="button" class="btn btn-success">Panier</button>
+                    </a>
+                    <form action="../Controller/theme_switch.php" method="post">
+                        <input type="submit" class="btn btn-warning" value="Thème">
+                    </form>
+                    </div>';
+                }?>
+            </div>
         </div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
