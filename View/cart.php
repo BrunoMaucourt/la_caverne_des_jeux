@@ -103,8 +103,13 @@
                     </div>  
                  </div>';
         }
-        echo '<div class="row row-cols-3 m-3 text-center">
-            <div class="col-auto m-auto border">
+        echo '<div class="row row-cols-5 m-3 text-center">
+            <div class = "col-2 m-auto">
+                <a href = "../Controller/empty_cart.php">
+                    <button type="button" class="btn btn-danger">Vider le panier</button>
+                </a>
+            </div>
+            <div class="col-3 m-auto border">
                 <div class="row">
                     <h3>PRIX TOTAL DE VOTRE PANIER</h3>
                 </div>
@@ -117,9 +122,8 @@
                         echo number_format($total,2)."€".'
                     </h3>
                 </div>
-                
-        
-            </div>       
+            </div>
+            
         </div>
         <div class="row row-cols-12 m-auto">
     <div class="col-2 m-auto">
