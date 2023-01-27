@@ -1,5 +1,5 @@
 <?php
-    // Choose color theme for bootstrap
+    // Choose a standard color theme for bootstrap
     if(!isset($_SESSION['theme'])){
         $_SESSION['theme'] = 0;
     } 

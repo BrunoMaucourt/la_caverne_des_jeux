@@ -60,7 +60,7 @@
                     for ($i=0; $i < 3; $i++) {
                         echo '<div class="col-4">
                                 <p>'.$best_seller_games[$i]["name"].'</p>
-                                <img src="../Picture/Avatar/default_avatar.jpg" class="w-100 m-2">
+                                <img src="'.$best_seller_games[$i]["game_picture"].'" class="w-100 m-2">
                                 <p>'.$best_seller_games[$i]["description"].'</p>
                               </div>';
                     }
@@ -74,6 +74,8 @@
                     for ($i=0; $i < 3; $i++) {
                         echo '<div class="col-4">
                                 <p>'.$recent_games[$i]['name'].'</p>
+                                <img src="'.$recent_games[$i]["game_picture"].'" class="w-100 m-2">
+                                <p>'.$recent_games[$i]["description"].'</p>
                             </div>';
                     }
                 ?>

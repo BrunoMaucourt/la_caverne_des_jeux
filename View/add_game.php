@@ -37,19 +37,6 @@
             <input type="number" class="form-control" name="new_game_duration" min="0" id="new_game_duration" placeholder="Durée d'une partie (en minutes)" required='required'>
         </div>
     </div>
-    <!--
-    <div class="form-group row mt-3">
-        <label for="new_game_editor" class="col-sm-2 col-form-label">Editeur du jeu</label>
-        <select class="custom-select" name="new_game_editor" id="new_game_editor" required='required'>
-            <option selected>Editeur du jeu</option>
-            <?php
-                //foreach($editors as $key => $editor){
-                //    echo '<option value="editeur' . $key .'">' . $editor['name'] . '</option>';
-                //}
-                ?>   
-        </select>
-    </div>
-    -->
 
     <fieldset class="form-group mt-3">
         <div class="row">

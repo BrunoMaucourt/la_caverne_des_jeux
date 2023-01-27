@@ -1,20 +1,3 @@
-header{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-#banner{
-    display: flex;
-    justify-content: space-between;
-    padding: 1%;
-}
-
-.footer_column{
-    display: flex;
-    justify-content: space-around;
-}
-
 .carousel_container{
         margin: auto;
         margin-top: 50px;

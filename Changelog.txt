@@ -94,6 +94,8 @@ Amélioration à apporter au site
 
 - logique : Indiquer aux clients depuis combien de temps ils sont inscrits
 
+- logique : Réduire automatiquement la taille des textes de descriptions à 100 caractères max pour avoir quelque chose d'uniforme
+
 - logiquer : Proposer une page par jeux. Cette page permettra de rajouter des informations (photos, ...) mais également d'écrire des commentaires
 
 - logique : Stocker dans $_SESSION des messages d'erreurs et les afficher. Par exemple lorsqu'un utilisateur essaie de se connecter à une partie du site où il n'a pas accès

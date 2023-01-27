@@ -1,6 +1,6 @@
 </main>
 <footer class="container mt-5 p-4 bg-dark text-white text-center border-top border-light">
-    <div class="footer_column">
+    <div class="d-flex justify-content-around">
         <div>
             <figure>
                 <img src="../Picture/Website/icon_dice.svg" alt="">
@@ -27,19 +27,25 @@
         </div> 
     </div>
     
-    <div class="row align-items-center">
+    <div class="row align-items-center mb-5 mt-5">
         <div class="col">
-            Suivez nous
-        </div>
-            <div class="col">
-            Mentions légales
+            <a href="#" class="text-decoration-none text-white">
+                Suivez nous
+            </a>   
         </div>
         <div class="col">
-            Contact
+            <a href="#" class="text-decoration-none text-white">
+                Mentions légales
+            </a>  
+        </div>
+        <div class="col">
+            <a href="contact_form.php" class="text-decoration-none text-white">
+                Contact
+            </a>  
         </div>
     </div>
 
-    <p>Copyrigth 2023</p>
+    <p>Copyrigth 2023 - Couanon Thibault et Maucourt Bruno</p>
 </footer>
 </body>
 </html>
