@@ -1,5 +1,6 @@
 <?php
     require_once "../Controller/db_connection.php";
+    require_once "../Controller/constant.php";
     if(!isset($_SESSION['user_id'])){
         $user_is_connected = false;
     }else{
@@ -33,11 +34,13 @@
                 echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <a href="../View/profil.php">
                     <button type="button" class="btn btn-danger">Mon Profil</button>
-                </a>
-                <a href="./cart.php">
+                </a>';
+                if($_SESSION['account_level_id'] == CLIENT_LEVEL){
+                    echo'<a href="./cart.php">
                     <button type="button" class="btn btn-warning">Panier</button>
-                </a>
-            </div>';
+                </a>';
+                }
+                echo'</div>';
             }else{
                 echo'<div class="btn-group" role="group" aria-label="Basic mixed styles example">
                 <a href="../View/authentification.php">
