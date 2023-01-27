@@ -2,79 +2,112 @@ Changelog - La caverne des jeux
 
 User-stories finies
 
-User-stories en cours
-
-User-stories à faire
-
-Objectif 1 Le projet contient une base de données SQL composée de plusieurs tables. Chaque
+- Objectif 1 Le projet contient une base de données SQL composée de plusieurs tables. Chaque
 table possède une clé primaire. Certaines tables contiennent une clé étrangère.
 
-Objectif 2 Un utilisateur peut ajouter, modifier ou supprimer des produits gérés par le site web.
+- Objectif 2 Un utilisateur peut ajouter, modifier ou supprimer des produits gérés par le site web.
 
-Objectif 3 L’utilisateur peut rechercher des produits selon leur nom et/ou leur description.
+- Objectif 4 L’utilisateur peut rechercher des produits selon leur catégorie.
 
-Objectif 4 L’utilisateur peut rechercher des produits selon leur catégorie.
-
-Objectif 5 L'utilisateur doit pouvoir choisir le thème d'affichage des pages web du site. Par
+- Objectif 5 L'utilisateur doit pouvoir choisir le thème d'affichage des pages web du site. Par
 exemple, cela peut-être un thème "dark" ou un thème "light".
 
-Objectif 6 Le projet permet de gérer au moins une information de type « DATE ». Dans une
+- Objectif 6 Le projet permet de gérer au moins une information de type « DATE ». Dans une
 page du site, différentes informations seront affichées ou non selon la valeur de cette
 date. Par ailleurs, cette date pourra être modifiée dans une page du site.
 
-Objectif 7 Une partie du projet est à accès restreint. Un utilisateur autorisé a la possibilité de se
+- Objectif 7 Une partie du projet est à accès restreint. Un utilisateur autorisé a la possibilité de se
 connecter pour accéder à cette partie du projet. Il peut également se déconnecter.
 Lorsqu’un utilisateur non autorisé essaye d’accéder directement à l’espace restreint, il
 est automatiquement redirigé vers une page en libre accès.
 
-Objectif 8 Le site permet à l’utilisateur de gérer un « panier ». L’utilisateur peut ajouter des
+- Objectif 8 Le site permet à l’utilisateur de gérer un « panier ». L’utilisateur peut ajouter des
 produits dans son panier, en supprimer, modifier des quantités ... et il voit le prix total
 de son panier.
 
-Objectif 9 Les utilisateurs peuvent continuer leur visite avec leur panier, même après avoir fermé
+- Objectif 9 Les utilisateurs peuvent continuer leur visite avec leur panier, même après avoir fermé
 puis ré-ouvert leur navigateur web.
 
-Objectif 10 Le site permet l’upload de fichiers. Ces fichiers peuvent être des images, des fichiers
+- Objectif 10 Le site permet l’upload de fichiers. Ces fichiers peuvent être des images, des fichiers
 PDF ou autres.
 
-Objectif 11 Le site contient plusieurs formulaires HTML utilisant des méthodes GET et au moins
+- Objectif 11 Le site contient plusieurs formulaires HTML utilisant des méthodes GET et au moins
 un formulaire utilisant une méthode POST.
 
-Objectif 12 Le site contient au moins un formulaires HTML avancé avec une liste d’options, des
+- Objectif 12 Le site contient au moins un formulaires HTML avancé avec une liste d’options, des
 case à cocher, des boutons radio et du texte sur plusieurs lignes.
 
-Objectif 13 Un fichier « Changelog.txt » contient la description de chaque US réalisée et
+- Objectif 13 Un fichier « Changelog.txt » contient la description de chaque US réalisée et
 des US qui pourraient être réalisées ultérieurement.
 
-Objectif 14 Le site met en œuvre un framework CSS front-end.
+- Objectif 14 Le site met en œuvre un framework CSS front-end.
 
-Objectif 15 Un fichier PHP contient des fonctions qui sont utilisées dans plusieurs autres fichiers
+- Objectif 15 Un fichier PHP contient des fonctions qui sont utilisées dans plusieurs autres fichiers
 PHP. Certaines de ces fonctions retournent du code HTML.
 
-Objectif 16 Coder en respectant les bonnes pratiques : convention de nommage des fichiers, tous
+- Objectif 16 Coder en respectant les bonnes pratiques : convention de nommage des fichiers, tous
 les fichiers sont en UTF-8, code HTML valide, code CSS valide.
 
-Objectif 17 Coder en respectant les bonnes pratiques : absence de duplication de code, code PHP
+- Objectif 17 Coder en respectant les bonnes pratiques : absence de duplication de code, code PHP
 respectant des conventions de nommage et code PHP documenté.
 
-Objectif 18 Le principe des sessions est mise en œuvre de manière pertinente sur quelques pages
+- Objectif 18 Le principe des sessions est mise en œuvre de manière pertinente sur quelques pages
 du projet.
 
-Objectif 19 Coder en considérant tous les cas de figure. Par exemple, une recherche ne fournit pas
+- Objectif 19 Coder en considérant tous les cas de figure. Par exemple, une recherche ne fournit pas
 obligatoirement une liste de produits.
 
-Objectif 20 Créer une réalisation de type « projet » sur vos profils LinkedIn afin de présenter votre
+- Objectif 20 Créer une réalisation de type « projet » sur vos profils LinkedIn afin de présenter votre
 projet de cette semaine de formation.
 
-Améliorer la sécurité
+User-stories en cours
 
-- Calculer la force du mot de passe
-- Renvoyer un message d'erreur lorsqu'un mot de passe trop simple est choisi : password, 0000, motdepasse, ...
+- Objectif 3 L’utilisateur peut rechercher des produits selon leur nom et/ou leur description.
 
-Photo profil
+User-stories à faire
 
-- Gérer les tailles d'images pour l'upload
+- Aucune
 
-Header / navbar
+Amélioration à apporter au site
 
-- actualiser s'il y a un grand nombre de catégories / éditeur / ...
+- sécurité : Calculer la force du mot de passe
+
+- sécurité : Bouton pour rendre visible le mot de passe dans le formulaire de saisie
+
+- sécurité : Renvoyer un message d'erreur lorsqu'un mot de passe trop simple est choisi : password, 0000, motdepasse, ...
+
+- sécurité : Ne pas conserver les mots de passes en clair dans la base de données mais les transformer via un hash
+
+- sécurité : Ne pas conserver sur Git-Hub les informations concernant la connexion à la base de données, plutôt utiliser un fichier .gitignore
+
+- sécurité : Utiliser des mots de passes plus forts pour l'accès aux bases de données
+
+- logique : Empêcher une personne de s'inscrire si son adresse email est déjà présent dans la base de données
+
+- logique : Empêcher d'ajouter un nouveau jeu / éditeur / catégorie / ... s'ils sont déjà présents dans la base de données
+
+- logique : Actualiser les listes du header / navbar s'il y a un grand nombre de catégories / éditeur / ...
+
+- logique : Fusionner les paniers si une personne ajoute des produits sans être connecté puis se connecte à un compte qui possède déjà un panier
+
+- logique : Proposer des réductions pour les clients lors de leur anniversaire
+
+- logique : Indiquer aux clients depuis combien de temps ils sont inscrits
+
+- logiquer : Proposer une page par jeux. Cette page permettra de rajouter des informations (photos, ...) mais également d'écrire des commentaires
+
+- logique : Stocker dans $_SESSION des messages d'erreurs et les afficher. Par exemple lorsqu'un utilisateur essaie de se connecter à une partie du site où il n'a pas accès
+
+- logique : Créer des pages d'erreurs par exemple erreur404
+
+- logique : Créer un formulaire pour s'inscrire à une newsletter
+
+- logique : Créer une page de mentions légales et une de politique de confidentialité (RGPD)
+
+- logique : Incrémenter le nombre de jeux vendus lors de l'achat
+
+- image : Gérer les dimensions d'images lors de l'upload
+
+- MVC : Mettre en place en place un routeur pour naviguer entre les pages
+
+- MVC : Continuer à refactoriser le code pour bien séparer Model / View / Controller
